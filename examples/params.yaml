@@ -1,0 +1,9 @@
+# input
+step_input: 1
+
+# sim param
+dt: 0.001
+duration: 1.0
+
+# filter param
+tau: 0.1
