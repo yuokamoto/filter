@@ -19,6 +19,16 @@ public:
         return _y;
     }
 
+    // One-step update function by dt
+    double update2(double dt, double input) {
+        if (dt < _minDt) {
+            // Return output as is if dt is too small
+            return _y;
+        }
+        _y = (_tau * _y + dt * input) / (_tau + dt);
+        return _y;
+    }
+
     // Function to get the current output
     double getOutput() const {
         return _y;

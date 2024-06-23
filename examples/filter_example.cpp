@@ -90,6 +90,7 @@ int main(int argc, char* argv[]) {
     // Calculate pos, vel, and acc
     for (double t = 0; t < duration; t += dt) {
         const double res = fol.update(t, step_input);
+        // const double res = fol.update2(dt, step_input);
         tref.push_back(t);
         input.push_back(step_input);
         filtered_output.push_back(res);
